@@ -37,5 +37,24 @@ Image Types Used:
 Thermal Infrared (10.3–11.3 µm) → Cold cloud-top analysis
 False Color Composite → Structural visualization of spiral bands
 Visible Imagery → Eye clarity and symmetry (daytime only)
+
 📌 Sample IR image of Cyclone Biparjoy is included in this repository.
+
+### 🗂️ Sample Cyclone Data
+
+| Date       | Cyclone Name   | Image Type         | Estimated T-Value |
+|------------|----------------|--------------------|-------------------|
+| 2023-06-13 | Biparjoy       | Thermal IR (Band 4)| T4.5              |
+
+---
+
+### 📷 Cyclone Biparjoy – Thermal Infrared Imagery  
+![Cyclone Biparjoy - IR](./biparjoy.jpg)  
+*Satellite image showing cold cloud tops and central dense overcast of Cyclone Biparjoy (June 2023)*
+
+🛰️ NOAA-18 Satellite Imagery Samples (April 19, 2023)
+The following images demonstrate different types of satellite imagery used during the early stages of the cyclone season. These were processed as part of the cyclone prediction model using NOAA-18 data.
+
+<table> <tr> <td align="center"> <b>🌈 False Color Elevation</b><br> <img src="./NOAA%2018%202023-04-19%2001-03PM%20HVCT%20False%20color%20Elevation%205.jpg" alt="False Color Elevation" width="300"/><br> Highlights surface elevation using vegetation and water reflectance patterns. </td> <td align="center"> <b>🌍 False Color Composite</b><br> <img src="./NOAA%2018%202023-04-19%2008-53AM%20HVCT%20False%20color.jpg" alt="False Color Composite" width="300"/><br> Useful for distinguishing between clouds, land cover, and water bodies. </td> <td align="center"> <b>🌡️ Thermal Infrared</b><br> <img src="./NOAA%2018%202023-04-19%2008-53AM%20Thermal.jpg" alt="Thermal IR" width="300"/><br> Captures outgoing longwave radiation to assess cloud-top temperatures. </td> </tr> </table>
+
 
