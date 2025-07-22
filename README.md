@@ -57,4 +57,61 @@ The following images demonstrate different types of satellite imagery used durin
 
 <table> <tr> <td align="center"> <b>🌈 False Color Elevation</b><br> <img src="./NOAA%2018%202023-04-19%2001-03PM%20HVCT%20False%20color%20Elevation%205.jpg" alt="False Color Elevation" width="300"/><br> Highlights surface elevation using vegetation and water reflectance patterns. </td> <td align="center"> <b>🌍 False Color Composite</b><br> <img src="./NOAA%2018%202023-04-19%2008-53AM%20HVCT%20False%20color.jpg" alt="False Color Composite" width="300"/><br> Useful for distinguishing between clouds, land cover, and water bodies. </td> <td align="center"> <b>🌡️ Thermal Infrared</b><br> <img src="./NOAA%2018%202023-04-19%2008-53AM%20Thermal.jpg" alt="Thermal IR" width="300"/><br> Captures outgoing longwave radiation to assess cloud-top temperatures. </td> </tr> </table>
 
+🌪️ Dvorak’s Technique for Cyclone Intensity Estimation
 
+Dvorak’s Technique is a widely-used satellite-based method to estimate the intensity of tropical cyclones. Developed by Vernon Dvorak in the 1970s, it involves visually interpreting satellite imagery and matching observed cloud patterns with predefined templates to assign a T-number (Tropical Number), which corresponds to the storm's strength.
+
+🧠 Core Idea:
+
+The method links specific visual patterns and temperature characteristics—such as the shape, symmetry, and coldness of cloud tops—with cyclone intensity. This makes it especially valuable in cases where in-situ data (like aircraft reconnaissance) is unavailable.
+
+🔍 What is the Dvorak Technique?
+
+The Dvorak Technique is a satellite-based method for estimating the intensity of tropical cyclones. It correlates visible/infrared cloud features with 1-minute sustained wind speeds, converting them to T-numbers that reflect cyclone intensity.
+
+Here is the reference table we used:
+
+### 🌀 Dvorak Cyclone Intensity Classification Table
+
+| T/CI Number | Classification of CDs   | Wind Speed (Knots) | Wind Speed (km/h) | Pressure (P) | Wind Criteria (Knots) | Wind Criteria (km/h) |
+|-------------|--------------------------|---------------------|--------------------|--------------|------------------------|-----------------------|
+| T1.0        | L                        | –                   | –                  | –            | ≤ 17                   | ≤ 31                  |
+| T1.5        | D                        | 25                  | 46.3               | –            | 17–27                  | 31–49                 |
+| T2.0        | DD                       | 30                  | 55.6               | 4.5          | 28–33                  | 50–61                 |
+| T2.5        | CS                       | 35                  | 64.9               | 6.1          | 34–47                  | 62–88                 |
+| T3.0        | –                        | 45                  | 83.4               | 10.0         | –                      | –                     |
+| T3.5        | SCS                      | 55                  | 101.9              | 15.0         | 48–63                  | 89–117                |
+| T4.0        | VSCS                     | 65                  | 120.5              | 20.9         | 64–89                  | 118–166               |
+| T4.5        | –                        | 77                  | 142.7              | 24.4         | –                      | –                     |
+| T5.0        | ESCS                     | 90                  | 166.8              | 40.2         | 90–119                 | 167–221               |
+| T5.5        | –                        | 102                 | 189.0              | 51.6         | –                      | –                     |
+| T6.0        | –                        | 115                 | 213.1              | 65.6         | –                      | –                     |
+| T6.5        | SuCS                     | 127                 | 235.4              | 80.0         | ≥ 120                  | ≥ 222                 |
+
+**Legend**:
+- **L**: Low Pressure  
+- **D**: Depression  
+- **DD**: Deep Depression  
+- **CS**: Cyclonic Storm  
+- **SCS**: Severe Cyclonic Storm  
+- **VSCS**: Very Severe Cyclonic Storm  
+- **ESCS**: Extremely Severe Cyclonic Storm  
+- **SuCS**: Super Cyclonic Storm
+
+📊 Wind Data Analysis Workflow
+
+Dataset:
+NASA POWER CSV export (example: Jan-Feb - POWER_Regional_Daily_20240101_20240229.csv)
+Parameters Used:
+Daily average wind speed
+Daily max wind speed
+Surface pressure
+Conversion:
+Wind speed values converted from m/s to knots using:
+
+knots = m/s × 1.94384
+
+T-Value Assignment:
+Based on the average or maximum wind speed of a day, we mapped the value to the corresponding Dvorak T-number using the above table.
+Labeling:
+The satellite image for that day was manually labeled with its T-value to be used in future training datasets or analysis.
