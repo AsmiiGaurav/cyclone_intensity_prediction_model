@@ -1,4 +1,4 @@
-📘 README for ThaparSat – First Student-Designed Satellite from TIET
+ThaparSat – First Student-Designed Satellite from TIET
 
 Overview
 
