@@ -130,4 +130,19 @@ Deployment:
 - 'sept-oct.csv' - Wind speed data for months Sept and Oct 2023
 - 'nov-dec.csv' - Wind speed data for months Nov and Dec 2023
 - `merged_csv.csv` – Final labeled dataset with T-values
-  
+
+Upload an image of a cyclone to know it's T level intensity: 
+
+## 🔍 Scan to Run Inference on Your Phone
+
+![Scan QR to Run Inference](./QR.jpg)
+
+---
+
+## 🤖 LandingAI Interface Preview
+
+![LandingAI Interface](./landingAI.jpg)
+
+
+
+
