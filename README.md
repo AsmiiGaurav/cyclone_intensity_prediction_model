@@ -115,3 +115,19 @@ T-Value Assignment:
 Based on the average or maximum wind speed of a day, we mapped the value to the corresponding Dvorak T-number using the above table.
 Labeling:
 The satellite image for that day was manually labeled with its T-value to be used in future training datasets or analysis.
+
+Image Labeling:
+   - 80 satellite images were labeled with corresponding **T-values** based on max daily wind speed.
+   - Labels were stored in a combined dataset (`merged_csv`).
+
+Deployment:  
+   The labeled dataset was uploaded and deployed using [LandingAI](https://landing.ai/) to build a model capable of predicting T-values from satellite images.
+
+### 📁 Files
+
+- 'jan-feb.csv' - Wind speed data for months Jan-Feb 2023
+- 'july.csv' - Wind speed data for month July 2023
+- 'sept-oct.csv' - Wind speed data for months Sept and Oct 2023
+- 'nov-dec.csv' - Wind speed data for months Nov and Dec 2023
+- `merged_csv.csv` – Final labeled dataset with T-values
+  
